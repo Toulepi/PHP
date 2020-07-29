@@ -1,0 +1,45 @@
+
+
+
+1) C:\Windows\System32\drivers\etc\hosts.txt
+modifier le fichier "hosts"
+
+le fichier hosts permet de renommer l'IP 127.0.0.1 en un nom souhaité
+
+Par exemple: 
+127.0.0.1 localhost devient ==> 'touleps'
+
+
+#127.0.0.1 localhost
+#127.0.0.1 cv.toulepi  -- permet de lier le fichier "cv.toulepi" avec la config en" <VirtualHost *:80>"
+#::1 localhost
+
+
+
+2) C:\xampp\apache\conf\extra\httpd-vhosts.conf
+modifier le fichier "httpd-vhosts.conf"
+
+comme suit:
+
+<VirtualHost *:80>
+    DocumentRoot "C:/xampp/phpmyadmin"   #chemin sur mon vieil ordi
+    ServerName cv.toulepi	     # nom choisi taper dans le navigateur http://cv.toulepi
+</VirtualHost>
+
+
+autres configurations du fichier 'hosts':
+<VirtualHost *:80>
+    DocumentRoot "C:/xampp/phpMyAdmin"
+    ServerName phpMyAdmin
+</VirtualHost>
+
+<VirtualHost *:80>
+    DocumentRoot "C:/xampp/htdocs/monCV"
+    ServerName cv.toulepi
+</VirtualHost>
+
+
+tous les programmes web fait sur xamp sont mis dans le dossier 'htdocs' quite à créer des sous dossiers
+sur wamp ce sera dans le dossier 'www'
+
+
